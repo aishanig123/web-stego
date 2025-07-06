@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Dark gray text */
+        }
+        .section-heading {
+            border-bottom: 2px solid #e5e7eb; /* Light gray border for headings */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        /* Custom styles for the profile image placeholder */
+        .profile-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #d1d5db; /* Gray background */
+            border-radius: 50%; /* Circular shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem auto; /* Center and add margin */
+            overflow: hidden; /* Ensure image fits if replaced */
+        }
+        .profile-placeholder i {
+            color: #6b7280; /* Darker gray icon */
+            font-size: 4rem; /* Large icon size */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+        <!-- Top Header Bar -->
+        <header class="w-full bg-white shadow-md p-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">Your Name / Site Title</h1>
+            <nav class="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 text-lg">
+                <a href="#publications" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Publications</a>
+                <a href="#talks" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Talks</a>
+                <a href="#teaching" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Teaching</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Portfolio</a>
+                <a href="#blog-posts" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Blog Posts</a>
+                <a href="#cv" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">CV</a>
+                <a href="#guide" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Guide</a>
+                <a href="#settings" class="text-gray-600 hover:text-blue-600 transition-colors duration-200" aria-label="Settings">
+                    <i class="fas fa-cog"></i>
+                </a>
+            </nav>
+        </header>
+
+        <!-- Main Content Area: Sidebar and Main Content -->
+        <div class="flex flex-1 flex-col lg:flex-row max-w-7xl mx-auto w-full py-8 px-4 sm:px-6 lg:px-8">
+
+            <!-- Left Sidebar -->
+            <aside class="w-full lg:w-1/4 bg-white shadow-lg rounded-xl p-6 lg:mr-8 mb-8 lg:mb-0 flex flex-col items-center lg:items-start">
+                <div class="profile-placeholder">
+                    <i class="fas fa-user-circle"></i> <!-- Placeholder for profile picture -->
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-2 text-center lg:text-left">Your Name</h2>
+                <p class="text-gray-600 text-center lg:text-left mb-4">
+                    Short biography for the left-hand sidebar. Briefly describe your academic focus or role.
+                </p>
+
+                <div class="w-full text-gray-700 space-y-3 mt-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-globe mr-3 text-blue-600"></i>
+                        <span>Earth</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-university mr-3 text-blue-600"></i>
+                        <span>Red Brick University</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-blue-600"></i>
+                        <a href="mailto:your.email@example.com" class="hover:underline text-blue-600">your.email@example.com</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-graduation-cap mr-3 text-blue-600"></i>
+                        <a href="https://scholar.google.com/citations?user=your-google-scholar-id" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">Google Scholar</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-orcid mr-3 text-blue-600"></i>
+                        <a href="https://orcid.org/your-orcid-id" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">ORCID</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-book-reader mr-3 text-blue-600"></i>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=your+name" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">PubMed</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-github mr-3 text-blue-600"></i>
+                        <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">GitHub</a>
+                    </div>
+                     <div class="flex items-center">
+                        <i class="fab fa-linkedin mr-3 text-blue-600"></i>
+                        <a href="https://linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer" class="hover:underline text-blue-600">LinkedIn</a>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Right Main Content -->
+            <main class="w-full lg:w-3/4 bg-white shadow-lg rounded-xl p-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites</h2>
+                <p class="prose max-w-none text-gray-600 mb-8">
+                    This is the front page of a website that is powered by the <a href="#" class="text-blue-600 hover:underline">Academic Pages template</a> and hosted
+                    on GitHub pages. <a href="#" class="text-blue-600 hover:underline">GitHub pages</a> is a free service in which websites are built and hosted from
+                    code and data stored in a GitHub repository, automatically updating when a new commit is
+                    made to the repository. This template was forked from the <a href="#" class="text-blue-600 hover:underline">Minimal Mistakes Jekyll Theme</a>
+                    created by Michael Rose, and then extended to support the kinds of content that academics
+                    have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV.
+                    Incidentally, these same features make it a great template for anyone that needs to show off a
+                    professional template!
+                </p>
+                <p class="prose max-w-none text-gray-600 mb-8">
+                    You can <a href="#" class="text-blue-600 hover:underline">fork this template</a> right now, modify the configuration and Markdown files, add your
+                    own PDFs and other content, and have your own site for free, with no ads!
+                </p>
+
+                <h3 class="text-3xl font-semibold text-gray-700 section-heading">A data-driven personal website</h3>
+                <p class="prose max-w-none text-gray-600 mb-8">
+                    Like many other Jekyll-based GitHub Pages templates, Academic Pages makes you separate the
+                    website's content from its form. The content & metadata of your website are in structured
+                    data files (e.g., Markdown, YAML, CSV) and the template uses this data to generate the HTML.
+                    This means you can update your content without touching the code, and you can change the
+                    template without touching your content.
+                </p>
+
+
+                <!-- About Section (from previous version, now integrated) -->
+                <section id="about" class="mb-12">
+                    <h2 class="text-3xl font-semibold text-gray-700 section-heading">About Me</h2>
+                    <div class="prose max-w-none text-gray-600">
+                        <p class="mb-4">
+                            Welcome to my academic portfolio! I am a passionate researcher and student specializing in [Your Field of Study].
+                            My work focuses on [mention a specific area or two, e.g., developing novel algorithms for machine learning,
+                            exploring sustainable energy solutions, analyzing historical data patterns].
+                        </p>
+                        <p class="mb-4">
+                            I hold a [Your Degree] from [Your University] and am currently pursuing [Current Academic Pursuit, if any].
+                            My research interests include [List 2-3 key research interests, e.g., Artificial Intelligence, Renewable Energy,
+                            Computational Linguistics, Bioinformatics].
+                        </p>
+                        <p>
+                            I believe in the power of interdisciplinary approaches to solve complex problems and am always eager to collaborate
+                            on challenging projects. Feel free to explore my work and connect with me.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Resume Section (from previous version, now integrated) -->
+                <section id="resume" class="mb-12">
+                    <h2 class="text-3xl font-semibold text-gray-700 section-heading">Resume</h2>
+                    <div class="prose max-w-none text-gray-600">
+                        <p class="mb-4">
+                            You can download my full resume <a href="path/to/your/resume.pdf" class="text-blue-600 hover:underline font-medium" download>here (PDF)</a>.
+                        </p>
+
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3 mt-6">Education</h3>
+                        <ul class="list-disc list-inside ml-4">
+                            <li class="mb-2">
+                                <strong>Ph.D. in [Your Field]</strong>, [Your University], [City, State/Country] (Expected [Year])
+                                <ul class="list-circle list-inside ml-6 text-sm text-gray-500">
+                                    <li>Dissertation: "[Your Dissertation Title]"</li>
+                                    <li>Advisor: Prof. [Advisor's Name]</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2">
+                                <strong>M.S. in [Your Field]</strong>, [Your University], [City, State/Country] ([Year])
+                            </li>
+                            <li>
+                                <strong>B.S. in [Your Field]</strong>, [Your University], [City, State/Country] ([Year])
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3 mt-6">Research Experience</h3>
+                        <ul class="list-disc list-inside ml-4">
+                            <li class="mb-2">
+                                <strong>Research Assistant</strong>, [Lab Name], [University/Institution] ([Start Date] – [End Date])
+                                <ul class="list-circle list-inside ml-6 text-sm text-gray-500">
+                                    <li>Description of your responsibilities and achievements.</li>
+                                    <li>Key project: [Project Name] - [Brief outcome/contribution].</li>
+                                </ul>
+                            </li>
+                            <li class="mb-2">
+                                <strong>Visiting Scholar</strong>, [Institution Name], [City, State/Country] ([Start Date] – [End Date])
+                                <ul class="list-circle list-inside ml-6 text-sm text-gray-500">
+                                    <li>Description of your responsibilities and achievements.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3 mt-6">Publications</h3>
+                        <ul class="list-disc list-inside ml-4">
+                            <li class="mb-2">
+                                Author A, Author B, <strong>Your Name</strong>. "Title of Publication One." <em>Journal/Conference Name</em>, Year. <a href="#" class="text-blue-600 hover:underline text-sm">Link</a>
+                            </li>
+                            <li class="mb-2">
+                                <strong>Your Name</strong>, Author C, Author D. "Title of Publication Two." <em>Journal/Conference Name</em>, Year. <a href="#" class="text-blue-600 hover:underline text-sm">Link</a>
+                            </li>
+                        </ul>
+
+                        <h3 class="text-2xl font-semibold text-gray-700 mb-3 mt-6">Skills</h3>
+                        <ul class="list-disc list-inside ml-4">
+                            <li class="mb-2"><strong>Programming Languages:</strong> Python, R, Java, C++</li>
+                            <li class="mb-2"><strong>Tools & Frameworks:</strong> TensorFlow, PyTorch, scikit-learn, MATLAB, LaTeX</li>
+                            <li class="mb-2"><strong>Research Methods:</strong> Quantitative Analysis, Qualitative Research, Data Visualization, Statistical Modeling</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projects Section (from previous version, now integrated) -->
+                <section id="projects" class="mb-12">
+                    <h2 class="text-3xl font-semibold text-gray-700 section-heading">Projects</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Project 1 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title One</h3>
+                            <p class="text-gray-600 mb-3">
+                                A brief description of Project One. This project involved [mention key technologies, methodologies, or goals, e.g.,
+                                developing a predictive model for climate change, analyzing social media sentiment, building a new educational tool].
+                            </p>
+                            <a href="link-to-project-one-details.html" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                            <span class="ml-3 text-gray-500 text-sm">|</span>
+                            <a href="link-to-project-one-github.com" class="text-blue-600 hover:underline font-medium ml-3"><i class="fab fa-github mr-1"></i>GitHub</a>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title Two</h3>
+                            <p class="text-gray-600 mb-3">
+                                Description of Project Two. This project focused on [mention key aspects, e.g.,
+                                implementing a novel algorithm, conducting a comprehensive literature review, designing an experimental setup].
+                            </p>
+                            <a href="link-to-project-two-details.html" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                            <span class="ml-3 text-gray-500 text-sm">|</span>
+                            <a href="link-to-project-two-github.com" class="text-blue-600 hover:underline font-medium ml-3"><i class="fab fa-github mr-1"></i>GitHub</a>
+                        </div>
+
+                        <!-- Add more projects as needed -->
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title Three</h3>
+                            <p class="text-gray-600 mb-3">
+                                Description of Project Three. This project explored [mention key areas, e.g.,
+                                the applications of quantum computing, the societal impact of AI, new methods for data privacy].
+                            </p>
+                            <a href="link-to-project-three-details.html" class="text-blue-600 hover:underline font-medium">Learn More &rarr;</a>
+                            <span class="ml-3 text-gray-500 text-sm">|</span>
+                            <a href="link-to-project-three-github.com" class="text-blue-600 hover:underline font-medium ml-3"><i class="fab fa-github mr-1"></i>GitHub</a>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full bg-white shadow-md p-6 mt-8 text-center">
+            <p class="text-gray-500 text-sm">&copy; 2025 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
