@@ -37,12 +37,23 @@
             color: #6b7280; /* Darker gray icon */
             font-size: 4rem; /* Large icon size */
         }
+
+        /* Ensure main content scrolls independently on larger screens */
+        @media (min-width: 1024px) { /* Equivalent to Tailwind's lg breakpoint */
+            .main-content-wrapper {
+                margin-left: 25%; /* Pushes content to the right to make space for fixed sidebar */
+                width: 75%; /* Occupies the remaining width */
+                padding-top: 2rem; /* Add padding to account for the fixed header */
+                padding-bottom: 2rem; /* Add padding for bottom */
+            }
+        }
     </style>
 </head>
 <body class="antialiased">
     <div class="min-h-screen flex flex-col">
         <!-- Top Header Bar -->
-        <header class="w-full bg-white shadow-md p-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
+        <!-- The header is fixed at the top, spanning full width. z-10 ensures it stays above other content. -->
+        <header class="w-full bg-white shadow-md p-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center z-10 fixed top-0 left-0 right-0">
             <h1 class="text-3xl font-bold text-gray-800 mb-2 sm:mb-0">Your Name / Site Title</h1>
             <nav class="flex flex-wrap justify-center sm:justify-start space-x-4 sm:space-x-6 text-lg">
                 <a href="#publications" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Publications</a>
@@ -58,11 +69,16 @@
             </nav>
         </header>
 
-        <!-- Main Content Area: Sidebar and Main Content -->
-        <div class="flex flex-1 flex-col lg:flex-row max-w-7xl mx-auto w-full py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Main Content Area: Sidebar and Right Content Wrapper -->
+        <!-- This div now holds both the fixed sidebar and the scrollable main content.
+             The pt-16 ensures content starts below the fixed header. -->
+        <div class="flex flex-1 flex-col lg:flex-row w-full pt-16">
 
             <!-- Left Sidebar -->
-            <aside class="w-full lg:w-1/4 bg-white shadow-lg rounded-xl p-6 lg:mr-8 mb-8 lg:mb-0 flex flex-col items-center lg:items-start">
+            <!-- On large screens (lg:), the sidebar is fixed, takes 1/4 width, and scrolls independently. -->
+            <!-- h-[calc(100vh-4rem)] ensures it takes full height minus header height (4rem = 64px). -->
+            <aside class="w-full lg:w-1/4 bg-white shadow-lg rounded-xl p-6 mb-8 lg:mb-0 flex flex-col items-center lg:items-start
+                          lg:fixed lg:top-16 lg:left-0 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto z-0">
                 <div class="profile-placeholder">
                     <i class="fas fa-user-circle"></i> <!-- Placeholder for profile picture -->
                 </div>
@@ -108,7 +124,8 @@
             </aside>
 
             <!-- Right Main Content -->
-            <main class="w-full lg:w-3/4 bg-white shadow-lg rounded-xl p-8">
+            <!-- This main element now acts as the scrollable right column. -->
+            <main class="w-full lg:w-3/4 bg-white shadow-lg rounded-xl p-8 main-content-wrapper">
                 <h2 class="text-4xl font-bold text-gray-800 mb-6">Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites</h2>
                 <p class="prose max-w-none text-gray-600 mb-8">
                     This is the front page of a website that is powered by the <a href="#" class="text-blue-600 hover:underline">Academic Pages template</a> and hosted
@@ -263,7 +280,8 @@
         </div>
 
         <!-- Footer -->
-        <footer class="w-full bg-white shadow-md p-6 mt-8 text-center">
+        <!-- The footer is also adjusted to align with the main content on large screens. -->
+        <footer class="w-full bg-white shadow-md p-6 mt-8 text-center lg:ml-[25%]">
             <p class="text-gray-500 text-sm">&copy; 2025 Your Name. All rights reserved.</p>
         </footer>
     </div>
